@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Temel CSS Seçici */
+        body {
+            font-family: Arial, sans-serif; /* Sayfanın genel yazı tipi */
+            margin: 0; /* Sayfanın kenar boşluklarını kaldırma */
+            padding: 0; /* Sayfanın iç boşluklarını kaldırma */
+            background-color: #f0f0f0; /* Sayfa arka plan rengi */
+        }
+
+        /* ID Seçici */
+        #header {
+            background-color: #333; /* Arka plan rengi */
+            color: white; /* Yazı rengi */
+            padding: 20px; /* İç boşluk */
+            text-align: center; /* Yazıyı ortalama */
+        }
+
+        /* Sınıf Seçici */
+        .container {
+            max-width: 1200px; /* Maksimum genişlik */
+            margin: 0 auto; /* Ortalama */
+            padding: 20px; /* İç boşluk */
+            background-color: white; /* Arka plan rengi */
+        }
+
+        /* Element Seçici */
+        h1 {
+            font-size: 2.5em; /* Yazı boyutu */
+            margin-bottom: 20px; /* Alt boşluk */
+        }
+
+        /* Birleşik Seçiciler */
+        h1, p {
+            color: #333; /* Yazı rengi */
+            line-height: 1.6; /* Satır yüksekliği */
+        }
+
+        /* Class Seçici */
+        .highlight {
+            color: red; /* Yazı rengi */
+            font-weight: bold; /* Kalın yazı */
+        }
+
+        /* Pseudo-class */
+        a:hover {
+            color: blue; /* Üzerine gelindiğinde yazı rengi */
+            text-decoration: underline; /* Üzerine gelindiğinde altı çizili */
+        }
+
+        /* Pseudo-element */
+        p::first-line {
+            font-weight: bold; /* İlk satırı kalın yap */
+            color: #333; /* İlk satırın rengi */
+        }
+
+        /* Box Model - Kenar Boşluklar ve İç Boşluklar */
+        .box {
+            width: 300px; /* Genişlik */
+            height: 150px; /* Yükseklik */
+            margin: 20px auto; /* Otomatik ortalama */
+            padding: 10px; /* İç boşluk */
+            border: 2px solid #333; /* Çerçeve */
+            background-color: lightblue; /* Arka plan rengi */
+        }
+
+        /* Flexbox Kullanımı */
+        .flex-container {
+            display: flex; /* Flexbox aktif etme */
+            justify-content: space-around; /* Elemanlar arasında boşluk bırakma */
+            align-items: center; /* Elemanları ortalama */
+            padding: 20px; /* İç boşluk */
+            background-color: #ddd; /* Arka plan rengi */
+        }
+
+        .flex-item {
+            background-color: coral; /* Arka plan rengi */
+            padding: 10px; /* İç boşluk */
+            margin: 10px; /* Dış boşluk */
+            color: white; /* Yazı rengi */
+        }
+
+        /* Grid Layout Kullanımı */
+        .grid-container {
+            display: grid; /* Grid aktif etme */
+            grid-template-columns: repeat(3, 1fr); /* 3 sütunlu grid yapısı */
+            gap: 10px; /* Elemanlar arasındaki boşluk */
+            padding: 20px; /* İç boşluk */
+        }
+
+        .grid-item {
+            background-color: #333; /* Arka plan rengi */
+            color: white; /* Yazı rengi */
+            padding: 20px; /* İç boşluk */
+            text-align: center; /* Yazıyı ortalama */
+        }
+
+        /* Medya Sorguları */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Mobilde tek sütuna düşürme */
+            }
+
+            .flex-container {
+                flex-direction: column; /* Flex elemanları dikey hizalama */
+            }
+        }
+
+    </style>
+
+    <title>CSS Özellikleri Öğrenme</title>
+</head>
+<body>
+
+    <div id="header">
+        <h1>CSS Özellikleri Öğrenme</h1>
+    </div>
+
+    <div class="container">
+        <h1>Merhaba, Dünya!</h1>
+        <p>Bu bir <span class="highlight">örnek</span> paragraftır. CSS ile ilgili temel özellikleri öğreneceksiniz.</p>
+
+        <div class="box">
+            Box Model örneği. Kenar boşlukları, iç boşluklar ve çerçeve.
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item">Flex 1</div>
+            <div class="flex-item">Flex 2</div>
+            <div class="flex-item">Flex 3</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">Grid 1</div>
+            <div class="grid-item">Grid 2</div>
+            <div class="grid-item">Grid 3</div>
+        </div>
+    </div>
+    
+</body>
+</html>
