@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .box{
+            width: 400px;
+            height: 100px;
+            border: 10px solid red;/*her birinin etrafına border ekler*/
+            margin-bottom: 30px;/*alttaki elemanla arasına boşluk ekler*/
+            padding: 20px;/*içerideki elemanla border arasına boşluk ekler*/
+            box-sizing :border-box;/*border eklediğimizde elemanın boyutunu değiştirmez*/
+            border-radius: 10px;
+            
+            
+        }
+        .box:last-of-type{
+            margin-bottom: 0;
+        }
+        .circle{
+                width: 200px;
+                height: 200px;
+                border-radius: 99%;
+                background-color: darkgoldenrod;
+            }
+
+
+
+    </style>
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, dolore.</div>
+    <div class="box">Officiis nobis corrupti voluptatibus non provident numquam magnam porro modi.</div>
+    <div class="box">Consequuntur aliquid dolorum illo labore totam repellat earum itaque sed.</div>
+    <div class="box">Corporis, sit dolorem velit veritatis dolores aut odit alias vitae.</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, deleniti.</p>
+    <div class="circle"></div>
+</body>
+</html>

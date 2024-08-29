@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .box
+        {
+            
+            width: 400px;
+            background-color: red;
+            display: inline-block;
+            height: 100px;
+            margin: 10px;
+        }
+        /* Burası zaten bir blok yapısı olduğu için display: block; yazmamıza gerek yok. */
+
+        .span-box
+        {
+            width: 400px;
+            background-color: aqua;
+            display: inline-block;
+        } /* Burada display: inline-block; yazmamızın sebebi span'ın default olarak inline olduğu içindir. bizim buna siz verebilmemiz için  */
+
+        span.info{
+            background-color: yellow;
+            width: 200px;
+            height: 30px;
+            display: inline-block; /*blok olarak davranarak değişiklik yapmasına olanak vermek içindi*/
+        }
+        strong{
+            background-color: orange;
+            width: 600px;
+            height:120px;
+            display: inline-block;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">Lorem ipsum dolor sit.</div>
+    <div class="box">Tenetur veniam impedit consequuntur!</div>
+    <div class="box">Laudantium dolore dolor vero.</div>
+
+    <span class="span-box">Lorem ipsum dolor sit amet.</span><span class="span-box">Nam eius animi voluptatibus expedita.</span><span class="span-box">Autem doloremque architecto voluptatem fugit?</span>
+    <p>
+        Lorem ipsum, dolor <span class="span info">EDİP</span> consectetur adipisicing elit. <strong>Saepe assumenda </strong>voluptates voluptatem repudiandae consequuntur, est consectetur deserunt commodi. Provident assumenda dolore necessitatibus temporibus aliquam atque iusto quo tempora inventore quidem?
+    </p>
+</body>
+</html>
