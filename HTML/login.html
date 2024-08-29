@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sayfası</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Genellikle kullanılan CSS sıfırlama */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Sayfa genel stil */
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        /* Login kutusunun stil ayarları */
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Başlık stil ayarları */
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Form stil ayarları */
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Giriş alanları stil ayarları */
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Buton stil ayarları */
+        .login-container input[type="submit"] {
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Alt kısımdaki linklerin stil ayarları */
+        .login-container .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-container .links a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-container .links a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Sayfanın başlığı -->
+        <h2>Giriş Yap</h2>
+        <!-- Giriş formu -->
+        <form onsubmit="return validateForm()">
+            <!-- Kullanıcı adı alanı -->
+            <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
+            <!-- Şifre alanı -->
+            <input type="password" id="password" name="password" placeholder="Şifre" required>
+            <!-- Gönderme butonu -->
+            <input type="submit" value="Giriş Yap">
+        </form>
+        <!-- Kayıt ve şifre hatırlatma linkleri -->
+        <div class="links">
+            <a href="#">Şifremi Unuttum</a> | <a href="#">Hesap Oluştur</a>
+        </div>
+    </div>
+
+    <script>
+        /* Basit form doğrulama */
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Lütfen tüm alanları doldurun.");
+                return false;
+            }
+
+            // Başarılıysa form gönderilecek (şu an için yalnızca alert gösteriliyor)
+            alert("Giriş başarılı!");
+            return true;
+        }
+    </script>
+</body>
+</html>
