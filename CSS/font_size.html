@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* HTML elementinin font boyutunu belirleyerek base size oluşturuyoruz */
+        html{
+            font-size: 10px; /* Bu, 1rem'in 10px olduğu anlamına gelir */
+        }
+
+        .hero{
+            width: 600px;
+            margin: 0 auto;
+            padding: 4rem; /* 4rem = 40px, çünkü 1rem = 10px */
+            background-color: antiquewhite;
+        }
+
+        p{
+            font-size: 1.6rem; /* 1.6rem = 16px, çünkü 1rem = 10px */
+        }
+
+        .p-1{
+            font-size: 1.2rem; /* 1.2rem = 12px, çünkü 1rem = 10px */
+        }
+
+        .p-2{
+            font-size: 1.4em; /* 1.4em = 1.4 kat parent elementin (varsayılan olarak body's) font size'ı */
+        }
+
+        .p-3 h1{
+            font-size: 2em; /* 2em = 2 kat parent elementin (bu durumda .p-3'ün) font size'ı */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bu paragraflar, .p-1 ve .p-2 classlarına göre farklı font-size değerlerine sahip -->
+    <p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium iste omnis dolorum vero, praesentium esse debitis consectetur voluptatibus architecto eveniet.</p>
+
+    <p class="p-2">Lorem ipsum dolor sit amet consectetur architecto eveniet.</p>
+
+    <!-- Bu div, hero class'ına sahip ve içinde p-3 class'ına sahip bir paragraf barındırıyor -->
+   <div class="hero">
+    <p class="p-3">
+        <!-- Bu h1, 2em font-size ile gösterilecek. Parent element (p-3) font size'ı üzerinden hesaplanır -->
+        <h1>hero</h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero illum nesciunt facilis maiores quod odit nobis sint, tenetur consequatur neque.
+    </p>
+   </div>
+</body>
+</html>

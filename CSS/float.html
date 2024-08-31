@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box; /* Kutuların boyutlarını korumak için */
+        }
+        
+        .box {
+            width: 150px;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px; /* Kutu altına da boşluk ekleyelim */
+        }
+
+        .bg-aqua {
+            background-color: aqua;
+        }
+
+        .clear-fix {
+            clear: both;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        main {
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden; /* Float temizleme işlemi */
+        }
+
+        main > aside {
+            width: 30%;
+            float: left;
+            padding: 10px; /* İçerik kutusuna boşluk eklemek için */
+        }
+
+        main > section {
+            width: 70%;
+            float: left;
+            padding: 10px; /* İçerik kutusuna boşluk eklemek için */
+        }
+    </style>
+    <title>Float Kullanımı</title>
+</head>
+<body>
+    <!-- Üstteki kutular -->
+    <div class="box bg-aqua">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, dolor.</div>
+    <div class="box bg-aqua">Doloribus quisquam nulla sint assumenda dignissimos. Molestiae sunt neque qui!</div>
+    <div class="box bg-aqua">Omnis, ad nemo impedit recusandae in veritatis qui ratione. Molestiae.</div>
+    <div class="box bg-aqua">Qui error voluptates itaque a? Ex atque possimus molestiae nisi.</div>
+    <div class="box bg-aqua">Fugiat eum dolore vitae provident explicabo at itaque perspiciatis illo.</div>
+    <div class="clear-fix"></div> <!-- Clear-fix sınıfı ile float'ları temizleyelim -->
+    <div class="box bg-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, molestiae.</div>
+
+    <!-- Main content -->
+    <main>
+        <aside class="bg-aqua">
+            <ul>
+                <li>Lorem.</li>
+                <li>Quasi!</li>
+                <li>Alias.</li>
+                <li>A?</li>
+                <li>Expedita?</li>
+                <li>Distinctio.</li>
+                <li>Veritatis?</li>
+                <li>Suscipit.</li>
+                <li>Hic.</li>
+                <li>Quas.</li>
+            </ul>
+        </aside>
+        <section class="bg-red">
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, tempore.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deleniti aut iure quae beatae maiores rem, excepturi laudantium repellendus accusamus!</p>
+            <p>Quae dignissimos architecto error quam. Non veniam suscipit enim, animi perspiciatis laborum ea voluptatem sapiente. Eveniet debitis nisi consequuntur assumenda.</p>
+            <p>At culpa debitis veniam ipsum iure ad adipisci sit dolores alias, dolore asperiores repellat facilis quaerat qui non error natus.</p>
+        </section>
+        <div class="clear-fix"></div> <!-- Float'ları temizlemek için clear-fix -->
+    </main>
+</body>
+</html>
