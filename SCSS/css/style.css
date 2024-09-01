@@ -1,3 +1,32 @@
-.contanier .row .col {
-  width: 100%;
+.container {
+  background-color: #33495e;
+  color: #ecf0f1 10px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  background-color: red;
+}
+
+nav {
+  background-color: #33495e;
+  margin-bottom: 20px;
+  padding: 15px 5px;
+}
+nav ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+nav ul > li > a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+nav ul > li > a:hover {
+  color: hsl(35, 77%, 62%);
 }/*# sourceMappingURL=style.css.map */
