@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS değişkenleri tanımlanıyor, bu sayede renkler birden fazla yerde kolayca kullanılabilir */
+    :root {
+      --green: #2ecc71;
+      --blue: #3498db;
+      --yellow: #f1c40f;
+      --red: #e74c3c;
+      --dark-blue: #34495e;
+      --midnight-blue: #2c3e50;
+      --light-white: #ecf0f1;
+      --silver: #bdc3c7;
+    }
+
+    /* Sayfa genelinde arka plan rengi ve kenar boşlukları ayarlanıyor */
+    body {
+      background-color: var(--silver); /* Sayfanın arka plan rengi gümüş renginde ayarlanıyor */
+      margin: 0; /* Sayfanın kenar boşlukları sıfırlanıyor */
+      padding: 0; /* Sayfanın iç boşlukları sıfırlanıyor */
+    }
+
+    /* Ana container (main) için stil ayarları */
+    main {
+      background-color: var(--light-white); /* Açık beyaz arka plan rengi */
+      width: 800px; /* Genişlik 800px olarak ayarlanıyor */
+      margin: 0 auto; /* Ortalanıyor (sağ ve sol margin ile) */
+      display: flex; /* Flexbox düzeni aktif ediliyor */
+      padding: 20px; /* İçeriden boşluk veriliyor */
+      border-radius: 20px; /* Kenarları yuvarlatılıyor */
+    }
+
+    /* Ekran genişliği 575px'den küçükse (mobil cihazlar için) stil değişiklikleri */
+    @media (max-width: 575px) { 
+      /* Mobil cihazlar için main container stil ayarları */
+      main {
+        flex-direction: column; /* İçerikler dikeyde sıralanıyor */
+        width: calc(100% - 60px); /* Genişlik, pencere genişliğine göre ayarlanıyor */
+      }
+
+      /* Aside bölümünün sırası değiştiriliyor (mobil cihazlarda önce görünmesi için) */
+      aside {
+        order: 1;
+      }
+    }
+  </style>
+  <title>Flexbox Order Kullanımı</title>
+</head>
+<body>
+  
+  <!-- Ana container, flexbox ile içerikler düzenleniyor -->
+  <main class="container">
+    <!-- Yan menü (aside) -->
+    <aside>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="">Lorem.</a></li>
+        <li><a href="">Laudantium.</a></li>
+        <li><a href="">Quos!</a></li>
+        <li><a href="">Recusandae.</a></li>
+        <li><a href="">Sunt?</a></li>
+      </ul>
+    </aside>
+
+    <!-- İçerik bölümü (section) -->
+    <section>
+      <!-- Birinci makale -->
+      <article>
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, velit.</p>
+        <p>Omnis animi veritatis dolores tenetur asperiores, explicabo earum repellat ratione.</p>
+        <p>Debitis, beatae. Atque possimus quasi nam. Quas quibusdam repellendus adipisci?</p>
+      </article>
+
+      <!-- İkinci makale -->
+      <article>
+        <h2>Accusamus, esse.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, maxime!</p>
+        <p>Reprehenderit necessitatibus labore ducimus ab tenetur eligendi doloribus, sapiente asperiores.</p>
+        <p>Sit deserunt magnam ad odio recusandae praesentium eum commodi suscipit.</p>
+      </article>
+
+      <!-- Üçüncü makale -->
+      <article>
+        <h2>Aperiam, possimus.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, porro.</p>
+        <p>Nihil facere placeat vitae cum excepturi esse facilis impedit unde.</p>
+        <p>Debitis quibusdam voluptatum tempora nihil officiis porro vero autem repellendus.</p>
+      </article>
+
+      <!-- Dördüncü makale -->
+      <article>
+        <h2>Quasi, dolores.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, unde?</p>
+        <p>Illo rerum quaerat praesentium cupiditate facere itaque fugit accusamus sequi.</p>
+        <p>Quae recusandae a exercitationem mollitia ad libero rem iste illum!</p>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
