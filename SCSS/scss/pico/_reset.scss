@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box; /* Padding ve border'ın toplam genişliği etkilememesi için box-sizing ayarlanıyor */
+}
+body{
+    background-color: var(--off-white); /* Sayfanın arka plan rengini tanımlanmış renkle ayarlar */
+    margin: 0; /* Sayfanın kenar boşluklarını sıfırlar */
+    padding: 0%; /* Sayfanın iç boşluklarını sıfırlar */
+    font-family: 'Inter', sans-serif; /* Sayfa için font ailesini Inter olarak ayarlar */
+}
