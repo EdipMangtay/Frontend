@@ -1,0 +1,14 @@
+.extend-button{
+    color:red;
+    background-color: black;
+
+    &--success{
+        @extend .extend-button;
+        background-color: $bg-color;
+    }
+}
+.entend-container-info{
+    @extend .container;
+    background: yellowgreen;
+    font-size: 20px;
+}

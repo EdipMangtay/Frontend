@@ -27,7 +27,7 @@ nav ul > li > a:hover {
   background-color: red;
 }
 
-.container {
+.container, .entend-container-info {
   background-color: #33495e;
   color: #ecf0f1 10px;
 }
@@ -50,4 +50,68 @@ nav ul > li > a:hover {
 }
 .btn--state-danger {
   color: #900; /* Tehlike durumunda (state-danger) buton metin rengini koyu kırmızı (#900) yapar. */
+}
+
+/* 
+  card_mixin: Bu mixin, kart stilini belirlemek için kullanılır. 
+  Sabit arka plan rengi (bg-color) ve kenarlık stilini içerir.
+*/
+/* 
+  card_mixin_v2: Bu mixin, card_mixin'in gelişmiş bir versiyonudur. 
+  Arka plan rengini dinamik olarak geçmenize olanak tanır, varsayılan olarak $bg-color kullanılır.
+*/
+/* 
+  .card sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak stil uygulanmış bir kart oluşturur. 
+  Varsayılan arka plan rengini kullanır ($bg-color).
+*/
+.card {
+  background-color: #33495e; /* Arka plan rengini, parametre olarak geçen $bg değerine ayarlar */
+  border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+  border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  /* Mixin'in varsayılan arka plan rengi kullanılarak dahil edilmesi */
+}
+
+/* 
+  .card_with_bg sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak özel arka plan rengine sahip bir kart oluşturur.
+  Burada arka plan rengi (#f1c40f) olarak belirlenmiştir.
+*/
+.card_with_bg {
+  background-color: #f1c40f; /* Arka plan rengini, parametre olarak geçen $bg değerine ayarlar */
+  border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+  border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  /* Özel arka plan rengi (#f1c40f) kullanılarak mixin'in dahil edilmesi */
+}
+
+.extend-button, .extend-button--success {
+  color: red;
+  background-color: black;
+}
+.extend-button--success {
+  background-color: #33495e;
+}
+
+.entend-container-info {
+  background: yellowgreen;
+  font-size: 20px;
+}
+
+.icon-home {
+  font-size: 16px;
+  background-image: url("assets/icons/name.svg");
+}
+
+.pt {
+  padding-top: 10px;
+}
+
+.pb {
+  padding-bottom: 10px;
+}
+
+.pl {
+  padding-left: 10px;
+}
+
+.pr {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */
