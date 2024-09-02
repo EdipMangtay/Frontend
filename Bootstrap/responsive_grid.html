@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <!-- Bootstrap CSS Dosyasını Dahil Etme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <!-- Ana Container Başlangıcı -->
+    <div class="container">
+      <!-- Birinci Satır: Medium ve Üzeri Ekran Boyutları -->
+      <div class="row">
+        <div class="col-md-4 bg-danger">
+          <h2>Medium ve Sonrasi</h2>
+        </div>
+        <div class="col-md-4 bg-info">
+          <h2>Medium ve Sonrasi</h2>
+        </div>
+        <div class="col-md-4 bg-success">
+          <h2>Medium ve Sonrasi</h2>
+        </div>
+      </div>
+      
+      <!-- İkinci Satır: Small ve Üzeri Ekran Boyutları -->
+      <div class="row my-3">
+        <div class="col-sm-4 bg-danger">
+          <h2>SM ve Sonrasi</h2>
+        </div>
+        <div class="col-sm-4 bg-info">
+          <h2>SM ve Sonrasi</h2>
+        </div>
+        <div class="col-sm-4 bg-success">
+          <h2>SM ve Sonrasi</h2>
+        </div>
+      </div>
+
+      <!-- Üçüncü Satır: Responsive Sütunlar -->
+      <div class="row my-3">
+        <div class="col-sm-4 col-md-3 col-lg col-xl-9 bg-danger">
+          <h2>Bilgi</h2>
+          <!-- Responsive olarak genişliği farklılık gösteren sütun -->
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg col-xl bg-info">
+          <h2>Bilgi</h2>
+          <!-- Responsive olarak genişliği farklılık gösteren sütun -->
+        </div>
+        <div class="col-sm-4 col-md col-lg-9 col-xl bg-success">
+          <h2>Bilgi</h2>
+          <!-- Responsive olarak genişliği farklılık gösteren sütun -->
+        </div>
+      </div>
+
+      <!-- Dördüncü Satır: İç içe Geçmiş Grid Sistemleri -->
+      <div class="row">
+        <div class="col-sm-6 bg-success">
+          <!-- İç içe Grid sistemi oluşturmak için 12'lik sistemi tekrar kullanırız -->
+          <div class="row">
+            <div class="col-sm">item1</div>
+            <div class="col-sm">item2</div>
+            <div class="col-sm">item3</div>
+            <div class="col-sm">item4</div>
+            <div class="col-sm">item5</div>
+            <!-- 12'lik sistemde her bir sütun 2.4 genişliğinde olacak şekilde hesaplanır -->
+          </div>
+        </div>
+        <div class="col-sm bg-danger">bilgi</div>
+        <div class="col-sm bg-warning">bilgi</div>
+        <div class="col-sm bg-success-subtle">bilgi</div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript Dosyasını Dahil Etme -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
