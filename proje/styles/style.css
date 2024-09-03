@@ -29,6 +29,19 @@ body {
     background-color: var(--main-color); /* Örneğin, ana rengi kullanarak */
     height: 200vh; /* Sayfa yüksekliğini ayarlar */
 }
+section{
+    padding: 3.5rem 7%; /* Öğenin iç kenar boşluğunu ayarlar */
+}
+.btn{
+    margin-top: 1rem; /* Öğenin üst kenar boşluğunu ayarlar */
+    display: inline-block; /* Öğenin blok olmayan bir öğe olarak görüntülenmesini sağlar */
+    padding: 2rem 3.75rem; /* Öğenin iç kenar boşluğunu ayarlar */
+    border-radius: 30rem; /* Öğenin kenar yarıçapını ayarlar */
+    font-size: 1.7rem; /* Öğenin yazı tipi boyutunu ayarlar */
+    color: #fff; /* Örneğin, siyah rengi kullanarak */
+    background-color: var(--black-color); /* Örneğin, ana rengi kullanarak */
+    cursor: pointer; /* Öğenin imleci değiştirir */
+}
 /* header start */
 .header .logo img{
     height: 10rem;
@@ -64,3 +77,28 @@ body {
     background-color: transparent; /* Örneğin, siyah rengi kullanarak */
 }
 /* header end */
+/* section start */
+.home{
+    min-height: 100vh; /* Öğenin minimum yüksekliğini ayarlar */
+    background: url('../images/home.jpg') no-repeat center center/cover; /* Öğenin arka planını ayarlar */
+    background-size: cover; /* Öğenin arka planını ayarlar */;
+    background-position: center; /* Öğenin arka planını ayarlar */
+    margin-top: -14.5rem; /* Öğenin üst kenar boşluğunu ayarlar */
+    display: flex; /* Öğeleri yatay olarak hizalar */
+    align-items: center; /* Öğeleri dikey olarak hizalar */ 
+
+}
+.home .content{
+    max-width: 60rem; /* Öğenin maksimum genişliğini ayarlar */
+}
+.home>.content h1{ /* Öğenin başlık etiketini seçer */
+    font-size: 6rem;
+    color: #fff; /* Örneğin, siyah rengi kullanarak */
+}
+.home>.content p{ /* Öğenin paragraf etiketini seçer */
+    font-size: 2rem; /* Öğenin yazı tipi boyutunu ayarlar */
+    font-weight: 300; /* Öğenin yazı tipi kalınlığını ayarlar */
+    line-height: 1.8; /* Öğenin satır yüksekliğini ayarlar */
+    padding: 1rem 0; /* Öğenin iç kenar boşluğunu ayarlar */
+    color: #ccc; /* Örneğin, siyah rengi kullanarak */
+}
