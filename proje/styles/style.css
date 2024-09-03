@@ -1,0 +1,20 @@
+/* Reset stilleri */
+*{
+    margin: 0; /* Tüm öğelerin kenar boşluğunu 0 olarak ayarlar */
+    padding: 0; /* Tüm öğelerin iç boşluğunu 0 olarak ayarlar */
+    /* Bu bir sıfırlama işlemidir */
+    box-sizing: border-box; /* Genişlik ve yükseklik özelliklerinin öğelerin dolgu ve kenarlığını içermesini sağlar */
+    outline: none; /* Bir öğe odaklandığında dış çizgiyi kaldırır */
+    border: none; /* Tüm öğelerin kenarlığını kaldırır */
+    text-decoration: none; /* Alt çizgi veya üstü çizgi gibi metin süslemelerini kaldırır */
+    text-transform: capitalize; /* Metindeki her kelimenin ilk harfini büyük harf yapar */
+    transition: all 0.3s ease; /* Geçiş efektlerini ayarlar */
+}
+
+
+
+
+
+.logo img{
+    height:  7rem;
+}
