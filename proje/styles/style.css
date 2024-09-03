@@ -1,4 +1,11 @@
 /* Reset stilleri */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main-color: #e84242;
+    --black-color: #121212; 
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+}
+
 *{
     margin: 0; /* Tüm öğelerin kenar boşluğunu 0 olarak ayarlar */
     padding: 0; /* Tüm öğelerin iç boşluğunu 0 olarak ayarlar */
@@ -11,10 +18,49 @@
     transition: all 0.3s ease; /* Geçiş efektlerini ayarlar */
 }
 
-
-
-
-
-.logo img{
-    height:  7rem;
+/* Base HTML Code */
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+    /* Remove the invalid line */
+    scroll-padding-top: 9rem; /* Sayfa içeriğinin üst kısmının kaydırma çubuğuna göre ayarlanmasını sağlar */
+    scroll-behavior: smooth; /* Kaydırma işlemlerini yumuşatır */
 }
+body {
+    background-color: var(--main-color); /* Örneğin, ana rengi kullanarak */
+    height: 200vh; /* Sayfa yüksekliğini ayarlar */
+}
+/* header start */
+.header .logo img{
+    height: 10rem;
+}
+.header{
+    background: #fff;
+    display: flex; /* Öğeleri yatay olarak hizalar */
+    align-items: center; /* Öğeleri dikey olarak hizalar */
+    justify-content: space-between; /* Öğeleri yatay olarak hizalar ve aralarında boşluk bırakır */
+    padding: 0 7%; /* Öğenin iç kenar boşluğunu ayarlar */
+    margin: 2rem 7%; /* Öğenin dış kenar boşluğunu ayarlar */
+    border-radius: 30rem; /* Öğenin kenar yarıçapını ayarlar */
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75); /* Kutuya gölge ekler */
+    position: sticky;  /* Öğenin sabitlenmesini sağlar */ 
+    top: 0%; /* Öğenin üst kenarını ayarlar */
+    z-index: 1000; /* Öğenin yığınlama düzeyini ayarlar */
+}
+.header>nav>a{
+    margin: 0 1rem; /* Öğenin dış kenar boşluğunu ayarlar */
+    font-size: 1.6rem; /* Öğenin yazı tipi boyutunu ayarlar */
+    color: var(--black-color); /* Örneğin, siyah rengi kullanarak */
+    border-bottom: 0.1rem solid transparent; /* Öğenin alt kenarlığını ayarlar */
+}
+.header .navbar .active,
+.header nav a:hover{
+    border-bottom: 5px solid var(--main-color); /* Örneğin, ana rengi kullanarak */
+}
+
+.header .buttons .button{
+    cursor: pointer; /* Öğenin imleci değiştirir */
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent; /* Örneğin, siyah rengi kullanarak */
+}
+/* header end */
