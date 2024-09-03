@@ -25,6 +25,17 @@ html{
     scroll-padding-top: 9rem; /* Sayfa içeriğinin üst kısmının kaydırma çubuğuna göre ayarlanmasını sağlar */
     scroll-behavior: smooth; /* Kaydırma işlemlerini yumuşatır */
 }
+html:-webkit-scrollbar
+{
+    width: 10px; /* Kaydırma çubuğunun genişliğini ayarlar */
+    background: white; /* Kaydırma çubuğunun arka plan rengini ayarlar */
+}
+html:-webkit-scrollbar-thumb
+{
+    border-radius: 3rem;
+    background: var(--black-color); /* Kaydırma çubuğunun arka plan rengini ayarlar */
+    
+}
 body {
     background-color: var(--main-color); /* Örneğin, ana rengi kullanarak */
     height: 200vh; /* Sayfa yüksekliğini ayarlar */
@@ -65,15 +76,14 @@ section{
     color: var(--black-color); /* Örneğin, siyah rengi kullanarak */
     border-bottom: 0.1rem solid transparent; /* Öğenin alt kenarlığını ayarlar */
 }
-.header .navbar .active,
-.header nav a:hover{
+
+.header .navbar .active{
     border-bottom: 5px solid var(--main-color); /* Örneğin, ana rengi kullanarak */
 }
 
 .header .buttons .button{
     cursor: pointer; /* Öğenin imleci değiştirir */
     font-size: 2.5rem;
-    margin-left: 2rem;
     background-color: transparent; /* Örneğin, siyah rengi kullanarak */
 }
 /* header end */
@@ -101,4 +111,461 @@ section{
     line-height: 1.8; /* Öğenin satır yüksekliğini ayarlar */
     padding: 1rem 0; /* Öğenin iç kenar boşluğunu ayarlar */
     color: #ccc; /* Örneğin, siyah rengi kullanarak */
+}
+/* Home end */
+
+/* Menu start */
+
+.menu > .box-container {
+    display: grid; /* Öğeleri ızgaraya yerleştirir */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Öğelerin sütun sayısını ve genişliğini ayarlar */
+    gap: 20px; /* Kutular arasına boşluk ekler */
+}
+
+.menu > .box-container > .box {
+    background-color: #fff; /* Her bir kutuya arka plan rengi ekler */
+    border: 1px solid #ccc; /* Kutulara kenarlık ekler */
+    border-radius: 8px; /* Kutuların köşelerini yuvarlar */
+    overflow: hidden; /* Taşan içeriği gizler */
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak hizalar */
+    justify-content: space-between; /* İçeriği eşit şekilde dağıtır */
+    padding: 20px; /* İçerideki boşlukları ayarlar */
+}
+
+.menu > .box-container > .box img {
+    width: 100%; /* Görselin genişliğini kutuya sığacak şekilde ayarlar */
+    height: auto; /* Görselin yüksekliğini orantılı olarak ayarlar */
+    object-fit: cover; /* Görselin içeriğini sığdırır, taşan kısmını keser */
+    display: block; /* Görseli blok olarak gösterir */
+    margin-bottom: 15px; /* Görsel ile altındaki içerik arasında boşluk bırakır */
+}
+
+/* Kategori Etiketi */
+.menu > .box-container > .box .menu-category {
+    font-size: 1.4rem; /* Kategori etiketinin yazı boyutunu artırır */
+    color: #888; /* Kategori etiketinin rengi */
+    margin-bottom: 5px; /* Kategori etiketi ile başlık arasında boşluk */
+}
+
+/* Başlık */
+.menu > .box-container > .box h3 {
+    font-size: 2.4rem; /* Başlık (h3) yazı boyutunu artırır */
+    color: #333; /* Başlığın yazı rengi */
+    margin: 10px 0; /* Başlığın etrafındaki boşluk */
+    font-weight: 700; /* Başlık yazısının kalınlığı */
+}
+
+/* Fiyat */
+.menu > .box-container > .box .price {
+    font-size: 1.8rem; /* Fiyat yazı boyutunu artırır */
+    color: #444; /* Fiyat yazı rengi */
+    margin-bottom: 10px; /* Fiyat ile buton arasında boşluk */
+}
+
+/* Eski Fiyat (Üzerine Çizilen Fiyat) */
+.menu > .box-container > .box .price span {
+    text-decoration: line-through; /* Eski fiyatın üzerini çizer */
+    color: #888; /* Eski fiyat yazı rengi */
+    font-size: 1.4rem; /* Eski fiyat yazı boyutunu ayarlar */
+}
+
+/* Butonlar */
+.menu > .box-container > .box-bottom {
+    margin-top: auto; /* Butonu kutunun en altına iter */
+    text-align: center; /* Butonu ortalar */
+}
+
+.menu > .box-container > .box-bottom .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Butonun arka plan rengi */
+    color: #fff; /* Butonun yazı rengi */
+    border-radius: 50px; /* Butonu yuvarlak yapar */
+    text-transform: uppercase;
+    font-size: 1.6rem; /* Buton yazı boyutunu artırır */
+    font-weight: bold; /* Buton yazı kalınlığını artırır */
+    text-decoration: none; /* Butonun alt çizgisini kaldırır */
+}
+
+.menu > .box-container > .box-bottom .btn:hover {
+    background-color: #555; /* Hover durumunda butonun rengi */
+}
+
+/* Menu end */
+
+/* Our Product start */
+
+./* Product Section */
+
+/* Ürünler Bölümü İçin Stil */
+.product {
+    padding: 50px 0; /* Bölümün üst ve alt kenarlarına boşluk ekler */
+}
+
+.product .heading {
+    text-align: center; /* Başlığı ortalar */
+    font-size: 3rem; /* Başlığın yazı boyutunu ayarlar */
+    margin-bottom: 2rem; /* Başlığın altına boşluk ekler */
+    color: #fff; /* Başlığın yazı rengini beyaz yapar */
+}
+.about .heading {
+    text-align: center; /* Başlığı ortalar */
+    font-size: 3rem; /* Başlığın yazı boyutunu ayarlar */
+    margin-bottom: 2rem; /* Başlığın altına boşluk ekler */
+    color: #fff; /* Başlığın yazı rengini beyaz yapar */
+}
+.menu .heading {
+    text-align: center; /* Başlığı ortalar */
+    font-size: 3rem; /* Başlığın yazı boyutunu ayarlar */
+    margin-bottom: 2rem; /* Başlığın altına boşluk ekler */
+    color: #fff; /* Başlığın yazı rengini beyaz yapar */
+}
+
+.product .heading span {
+    color: var(--black-color); /* Vurgulanan kelimenin rengini ana renk yapar */
+}
+
+.product .box-container {
+    display: grid; /* Öğeleri ızgaraya yerleştirir */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Öğelerin sütun sayısını ve genişliğini ayarlar */
+    gap: 2rem; /* Kutular arasına boşluk ekler */
+}
+
+.product .box-container .box {
+    background-color: #fff; /* Kutuların arka plan rengini beyaz yapar */
+    border-radius: 20px; /* Kutuların köşelerini yuvarlar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Kutulara hafif bir gölge ekler */
+    display: flex; /* İçeriği esnek bir düzenle yerleştirir */
+    flex-direction: column; /* İçeriği dikey olarak hizalar */
+    overflow: hidden; /* Taşan içeriği gizler */
+}
+
+.product .box-container .box img {
+    width: 100%; /* Görselin genişliğini kutunun genişliğine eşit yapar */
+    height: 300px; /* Görselin yüksekliğini sabit bir değer yapar */
+    object-fit: cover; /* Görselin kutu içinde tamamen yer almasını sağlar */
+    border-bottom: 1px solid #ddd; /* Görselin altında ince bir çizgi oluşturur */
+}
+
+.product .box-container .box .title {
+    font-size: 1.4rem; /* Başlığın yazı boyutunu ayarlar */
+    color: #888; /* Başlığın yazı rengini gri yapar */
+    margin: 1rem 0 0.5rem 0; /* Başlık etrafında boşluklar oluşturur */
+    text-align: center; /* Başlığı ortalar */
+}
+
+.product .box-container .box .name {
+    font-size: 1.8rem; /* Ürün adının yazı boyutunu ayarlar */
+    color: var(--black-color); /* Ürün adının yazı rengini siyah yapar */
+    text-align: center; /* Ürün adını ortalar */
+    margin-bottom: 1rem; /* Ürün adının altına boşluk ekler */
+    display: block; /* Ürün adını blok olarak gösterir */
+    font-weight: bold; /* Ürün adını kalın yapar */
+}
+
+.product .box-container .box .box-bottom {
+    display: flex; /* İçeriği esnek bir düzenle yerleştirir */
+    justify-content: space-between; /* İçeriği yatayda eşit boşlukla hizalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    padding: 1rem; /* Kutunun iç kenarlarına boşluk ekler */
+}
+
+.product .box-container .box .box-bottom .info .price {
+    font-size: 2rem; /* Fiyatın yazı boyutunu ayarlar */
+    color: #000; /* Fiyatın yazı rengini siyah yapar */
+    font-weight: bold; /* Fiyatı kalın yapar */
+}
+
+.product .box-container .box .box-bottom .info .price span {
+    text-decoration: line-through; /* Eski fiyatın üzerini çizer */
+    color: #888; /* Eski fiyatın yazı rengini gri yapar */
+    font-size: 1.5rem; /* Eski fiyatın yazı boyutunu ayarlar */
+}
+
+.product .box-container .box .box-bottom .info .amount {
+    font-size: 1.2rem; /* Kalori ve gramaj bilgisinin yazı boyutunu ayarlar */
+    color: #888; /* Kalori ve gramaj bilgisinin yazı rengini gri yapar */
+}
+
+.product .box-container .box .box-bottom .product-btn a {
+    display: inline-block; /* Butonu blok seviyesinde görüntüler */
+    background-color: var(--main-color); /* Butonun arka plan rengini ana renk yapar */
+    color: #fff; /* Butonun yazı rengini beyaz yapar */
+    padding: 10px; /* Butonun iç kenarlarına boşluk ekler */
+    border-radius: 50%; /* Butonu yuvarlak yapar */
+    font-size: 1.6rem; /* Butonun yazı boyutunu ayarlar */
+    text-align: center; /* Buton içeriğini ortalar */
+}
+
+.product .box-container .box .box-bottom .product-btn a:hover {
+    background-color: var(--black-color); /* Hover durumunda butonun arka plan rengini siyah yapar */
+}
+
+
+/* About Start */
+
+.about>.row {
+    display: flex; /* Öğeleri yatay olarak hizalar */
+    flex-wrap: wrap; /* Öğeleri sardırır, böylece ekran boyutuna göre sarma işlemi gerçekleşir */
+    gap: 2rem; /* Öğeler arasında yatay ve dikey boşluk oluşturur */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    margin-bottom: 4rem; /* Row'un altına boşluk ekler */
+}
+
+.about .row .image {
+    flex: 1 1 45rem; /* Görsel kısmının esnek olmasını ve minimum 45rem genişlikte olmasını sağlar */
+    max-width: 100%; /* Görselin maksimum genişliğini kutu ile sınırlar */
+}
+
+.about .row img {
+    width: 100%; /* Görselin kutu içinde tamamen görünmesini sağlar */
+    border-radius: 2rem; /* Görselin köşelerini yuvarlar */
+    object-fit: cover; /* Görselin içeriğini kesmeden kutuya sığmasını sağlar */
+}
+
+.about .row .content {
+    flex: 2 1 45rem; /* İçerik kısmının esnek olmasını ve minimum 45rem genişlikte olmasını sağlar */
+    max-width: 100%; /* İçeriğin maksimum genişliğini kutu ile sınırlar */
+    padding: 2rem; /* İçeriğin kenarlarından boşluk bırakır */
+    background-color: #1c1c1c; /* İçerik kutusu için arka plan rengi ekler */
+    border-radius: 2rem; /* İçerik kutusunun köşelerini yuvarlar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* İçerik kutusuna hafif bir gölge ekler */
+}
+
+.about .row .content h3 {
+    font-size: 3rem; /* Başlığın yazı boyutunu ayarlar */
+    color: #fff; /* Başlığın rengini beyaz yapar */
+    margin-bottom: 2rem; /* Başlığın altına boşluk ekler */
+    font-weight: 700; /* Başlığı kalın yapar */
+}
+
+.about .row .content p {
+    font-size: 1.6rem; /* Paragraf metninin yazı boyutunu ayarlar */
+    color: #ccc; /* Paragraf metninin rengini gri yapar */
+    padding: 1rem 0; /* Paragrafların üst ve altına boşluk ekler */
+    line-height: 1.8; /* Satır yüksekliğini artırarak metni daha okunabilir hale getirir */
+    margin-right: 0.5rem; /* Paragrafın sağ tarafına boşluk ekler */
+}
+
+.about .row .content .btn {
+    display: inline-block; /* Butonu blok seviyesinde gösterir */
+    padding: 1rem 2rem; /* Butonun iç kenar boşluklarını ayarlar */
+    border-radius: 3rem; /* Butonun köşelerini yuvarlar */
+    background-color: var(--main-color); /* Butonun arka plan rengini ana renk yapar */
+    color: #fff; /* Butonun yazı rengini beyaz yapar */
+    font-size: 1.6rem; /* Butonun yazı boyutunu ayarlar */
+    font-weight: 600; /* Butonu kalın yapar */
+    margin-top: 2rem; /* Butonun üst tarafına boşluk ekler */
+    text-transform: uppercase; /* Buton metnini büyük harf yapar */
+    text-align: center; /* Buton metnini ortalar */
+    cursor: pointer; /* İmleci buton üzerinde değiştirilir */
+    transition: background-color 0.3s ease; /* Butonun arka plan rengini geçişle değiştirir */
+}
+
+.about .row .content .btn:hover {
+    background-color: #000; /* Buton üzerine gelindiğinde arka plan rengini siyah yapar */
+}
+
+/* Review */
+.review .box-container{
+    display: grid; /* Öğeleri ızgaraya yerleştirir */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Öğelerin sütun sayısını ve genişliğini ayarlar */
+    gap: 1.5rem; /* Kutular arasına boşluk ekler */
+}
+.review .box-container .box{
+    border: var(--border); /* Kutulara kenarlık ekler */
+    text-align: center; /* İçeriği ortalar */
+    padding: 3rem 2rem; /* Kutunun iç kenarlarına boşluk ekler */    
+    background-color: #fff;
+    border-radius: 3rem;
+}
+.review> h1{
+    font-size: 3rem; /* Başlığın yazı boyutunu ayarlar */
+    color: #fff; /* Başlığın yazı rengini beyaz yapar */
+    margin-bottom: 2rem; /* Başlığın altına boşluk ekler */
+    text-align: center; /* Başlığı ortalar */
+}
+.review>span{
+    color: var(--black-color); /* Ana rengi kullanarak */
+    font-size: 1.6rem; /* Yazı boyutunu ayarlar */
+    font-weight: 600; /* Yazı kalınlığını ayarlar */
+}
+.review .box-container .box p {
+    font-size: 1.6rem; /* Paragraf metninin yazı boyutunu ayarlar */
+    color: var(--black-color); /* Paragraf metninin rengini gri yapar */
+    padding: 1rem 0; /* Paragrafların üst ve altına boşluk ekler */
+    line-height: 1.8; /* Satır yüksekliğini artırarak metni daha okunabilir hale getirir */
+    margin-right: 0.5rem; /* Paragrafın sağ tarafına boşluk ekler */
+}
+.review .box-container .box .user {
+
+    height: 7rem; /* Kullanıcı resminin yüksekliğini ayarlar */
+    width: 7rem; /* Kullanıcı resminin genişliğini ayarlar */ 
+    border-radius: 50%; /* Kullanıcı resminin köşelerini yuvarlar */
+    object-fit: cover; /* Görselin içeriğini kesmeden kutuya sığmasını sağlar */
+}
+.review .box-container .box h3 {
+
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--main-color)
+}
+.review .box-container .box .stars i {
+
+    font-size: 1.5rem;
+    color: gold;
+
+}
+
+/* Contact Section Start */
+.contact {
+    padding: 50px 0; /* Üst ve alt boşluk */
+    background-color: var(--main-color); /* Arka plan rengi */
+}
+
+.contact .heading {
+    text-align: center; /* Başlık hizalaması */
+    font-size: 3rem; /* Başlık font boyutu */
+    margin-bottom: 2rem; /* Başlık alt boşluk */
+    color: #fff; /* Başlık metin rengi */
+}
+
+/* Row genişliğini sınırla ve hizala */
+.contact .row {
+    display: flex;  /* Yatay hizalama */
+    flex-wrap: wrap;  /* Öğeler küçüldüğünde alta geçmesini sağlar */
+    gap: 2rem;  /* Öğeler arasında yatay ve dikey boşluk ekler */
+    max-width: 1100px; /* Bölüm genişliğini sınırlandırır, üstteki öğelerle aynı genişlikte olur */
+    margin: 0 auto; /* Ortalar */
+}
+
+.contact .map {
+    flex: 1; /* Öğelerin eşit alan kaplaması */
+    min-width: 300px; /* Minimum genişlik */
+    height: 300px; /* Sabit yükseklik */
+    border-radius: 8px; /* Köşe yuvarlama */
+    overflow: hidden; /* Taşan içeriği gizler */
+}
+
+.contact .map iframe {
+    width: 100%; /* Haritanın tam genişlik kaplaması */
+    height: 100%; /* Haritanın tam yükseklik kaplaması */
+    border: none; /* Kenarlık olmadan gösterir */
+}
+
+.contact .form {
+    flex: 1; /* Form genişliği */
+    padding: 2rem; /* İçerik kenar boşlukları */
+    background-color: #333; /* Form arka plan rengi */
+    color: #fff; /* Form metin rengi */
+    border-radius: 8px; /* Köşe yuvarlama */
+}
+
+.contact .form h3 {
+    text-transform: uppercase; /* Metni büyük harf yapar */
+    font-size: 2.5rem; /* Başlık font boyutu */
+    margin-bottom: 2rem; /* Başlık alt boşluk */
+}
+
+.contact .form .input {
+    display: flex; /* İçeriği yatayda hizalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    margin-top: 1.5rem; /* Üst boşluk ekler */
+    margin-bottom: 1.5rem; /* Alt boşluk ekler */
+    border: var(--border); /* Kenarlık */
+    padding: 1rem; /* İç kenar boşluklarını ekler */
+    border-radius: 0.5rem; /* Kenarları yuvarlar */
+    background-color: #fff; /* İçerideki inputların arka plan rengini beyaz yapar */
+}
+
+.contact .form .input i {
+    margin-right: 1rem; /* İkon ile input arasına boşluk bırakır */
+    color: var(--black-color); /* İkon rengi */
+}
+
+.contact .form input[type="text"],
+.contact .form input[type="email"],
+.contact .form input[type="number"] {
+    width: 100%; /* Genişliği %100 yapma */
+    border: none; /* Kenarlık kaldırma */
+    background-color: transparent; /* Şeffaf arka plan */
+    color: var(--black-color); /* Metin rengi */
+    font-size: 1.6rem; /* Font boyutu */
+}
+
+.contact .form .btn {
+    display: inline-block; /* Blok seviyesinde gösterim */
+    padding: 1rem 2rem; /* İçerik kenar boşlukları */
+    background-color: var(--main-color); /* Buton arka plan rengi */
+    color: #fff; /* Buton metin rengi */
+    border-radius: 30px; /* Yuvarlak buton */
+    text-transform: uppercase; /* Metni büyük harf yapma */
+    font-size: 1.6rem; /* Font boyutu */
+    font-weight: bold; /* Kalın metin */
+    text-decoration: none; /* Alt çizgi kaldırma */
+    cursor: pointer; /* İmleç tipi */
+    width: 100%; /* Buton genişliği %100 */
+    margin-top: 1.5rem; /* Buton üst boşluk */
+}
+
+.contact .form .btn:hover {
+    background-color: #444; /* Hover durumu için arka plan rengi */
+}
+/* Contact Section End */
+
+/* blog start */
+.blog .box-container{
+    display: grid; /* Öğeleri ızgaraya yerleştirir */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Öğelerin sütun sayısını ve genişliğini ayarlar */
+    gap: 1.5rem; /* Kutular arasına boşluk ekler */
+}
+.blog .box-container .box{
+
+    background-color: #fff;
+    border-radius: 3rem;
+
+}
+.blog .box-container .box .image{
+
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;    
+}
+
+.blog .box-container .box .image img{
+
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 3rem;    
+    border-top-right-radius: 3rem;
+}
+.blog .box-container .box:hover .image img{ 
+
+    transform: scale(1.2);
+    padding: 2rem;
+}
+.blog .box-container .box .content{
+
+    padding: 2rem;
+}
+.blog .box-container .box .content .title{
+
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.blog .box-container .box .content span{
+
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.blog .box-container .box .content p{
+
+   line-height: 1.8;
+    font-size: 1.6rem;
+    color: #ccc;
 }
