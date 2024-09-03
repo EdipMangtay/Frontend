@@ -43,6 +43,13 @@ body {
 section{
     padding: 3.5rem 7%; /* Öğenin iç kenar boşluğunu ayarlar */
 }
+.search-input{
+    font-size: 1.6rem; /* Öğenin yazı tipi boyutunu ayarlar */
+    color: var(--black-color); /* Örneğin, siyah rengi kullanarak */
+    padding: 1rem ; /* Öğenin iç kenar boşluğunu ayarlar */
+    text-transform: none;
+    border-radius: 3rem;
+}
 .btn{
     margin-top: 1rem; /* Öğenin üst kenar boşluğunu ayarlar */
     display: inline-block; /* Öğenin blok olmayan bir öğe olarak görüntülenmesini sağlar */
@@ -194,11 +201,13 @@ section{
 
 /* Menu end */
 
-/* Our Product start */
+
 
 ./* Product Section */
 
 /* Ürünler Bölümü İçin Stil */
+
+
 .product {
     padding: 50px 0; /* Bölümün üst ve alt kenarlarına boşluk ekler */
 }
@@ -569,3 +578,43 @@ section{
     font-size: 1.6rem;
     color: #ccc;
 }
+
+/* Footer */
+.footer {
+    background-color: var(--black-color); /* Footer arka plan rengi */
+    text-align: center; /* Metni ortalar */
+
+}
+.footer>.search{
+    display: flex; /* Öğeleri yatay olarak hizalar */
+    justify-content: center; /* Öğeleri yatayda ortalar */
+    
+}
+.footer>.search>.search input{
+   width: 30rem; /* Arama kutusunun genişliğini ayarlar */
+    
+}
+.footer>.search>.btn-primary{
+    background-color: var(--main-color); /* Butonun arka plan rengini ana renk yapar */
+    padding: 1rem 2rem; /* Butonun iç kenar boşluklarını ayarlar */
+    margin-left: 1rem; /* Butonun sol tarafına boşluk ekler */
+    
+}
+.footer>.share{
+  
+    padding: 2rem 0;
+
+}
+.footer>.share a{
+
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 20px;
+    border: var(--border);
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+
