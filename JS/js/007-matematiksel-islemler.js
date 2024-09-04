@@ -20,7 +20,7 @@ console.log(3 ** 4)
 console.log("Asagi Yuvarlama", Math.floor(3.9) )
 
 // Yukari Yuvarlama
-console.log("Yukari Yuvarlama", Math.ceil(3.9) )
+console.log("Yukari Yuvarlama", Math.ceil(3.9) )    
 
 // Yakina Yuvarlama
 console.log("Yakina Yuvarlama 3.9",  Math.round(3.9) )
