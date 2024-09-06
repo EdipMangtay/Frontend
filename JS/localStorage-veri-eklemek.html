@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="color" name="color" id="color">
+     <button id="save">Kayedet</button>
+     <button id="show"> Bilgiyi Göster</button>
+     <script>
+        // "Kaydet" butonunu seç
+        const btn = document.querySelector("#save")
+        
+        // "Kaydet" butonuna tıklanma olayını dinle
+        btn.addEventListener("click", () => {
+          // Renk input elemanını seç
+          const colorInputElement = document.querySelector("#color")
+          
+          // Konsola inputtaki renk değerini yazdır
+          console.log(colorInputElement.value)
+          
+          // Local Storage'a seçilen arka plan rengini kaydet
+          localStorage.setItem("bgColor", colorInputElement.value)
+        })
+    
+        // "Göster" butonunu seç
+        const showBtn = document.querySelector("#show")
+        
+        // "Göster" butonuna tıklanma olayını dinle
+        showBtn.addEventListener("click", () => {
+          // Renk input elemanını tekrar seç
+          const colorInputElement = document.querySelector("#color")
+          
+          // Local Storage'dan kaydedilen arka plan rengini al
+          const bgColorValue = localStorage.getItem("bgColor")
+          
+          // Konsola Local Storage'dan alınan rengi yazdır
+          console.log(bgColorValue)
+          
+          // Input alanındaki değeri Local Storage'daki renk ile güncelle
+          colorInputElement.value = bgColorValue;
+          
+          // Sayfa arka plan rengini Local Storage'dan alınan değer ile güncelle
+          document.body.style.backgroundColor = bgColorValue;
+        })
+    
+        // Local Storage içerisindeki bilgiyi silmek için kullanılır
+        // localStorage.removeItem("bgColor")
+    </script>
+</body>
+</html>
