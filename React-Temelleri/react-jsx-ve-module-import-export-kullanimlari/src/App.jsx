@@ -90,7 +90,7 @@ function App() {
             {/* 10 atet single user component nasıl oluşturulur*/}
             {[...Array(10)].map((item, index) => <SingleUser key={index} />)}   
             {ITEMS.map((item, index ) => <span key={index}>{item}</span> )}
-            <Button/>
+            <Button className="btn btn-primary" info="dneme" dataId="1"/>
         </React.Fragment>
     );
 }
