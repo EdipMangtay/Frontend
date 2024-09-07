@@ -1,5 +1,7 @@
 import React from "react"; // 1. React kütüphanesini projeye dahil ediyoruz.
+import { ITEMS, SingleUser, UserList } from "./components/UserList";
 import "./App.css"; // 2. Uygulamaya özel CSS dosyasını dahil ediyoruz.
+import Button from "./components/Button";
 
 
     // 1.	JSX içindeki parantezi JavaScript çalıştırmak için kullanılır.
@@ -83,6 +85,12 @@ function App() {
                     <Image />
                 </ul>
             </div>
+            <UserList/>
+            <SingleUser/>
+            {/* 10 atet single user component nasıl oluşturulur*/}
+            {[...Array(10)].map((item, index) => <SingleUser key={index} />)}   
+            {ITEMS.map((item, index ) => <span key={index}>{item}</span> )}
+            <Button/>
         </React.Fragment>
     );
 }
@@ -91,5 +99,6 @@ function App() {
 function Image() {
     return <img src="https://picsum.photos/600/250" alt="" style={{ padding: "4px", borderRadius: "8px", border: "1px solid #bdc3c7" }} />;
 }
+
 
 export default App;
