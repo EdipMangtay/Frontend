@@ -7,4 +7,5 @@ console.log("window.location.hostname", window.location.hostname)
 const hasLinks = document.querySelectorAll('.hash-route-link')
 hasLinks.forEach(item => item.addEventListener('click',(event) =>{
     console.log(item)
-    console
+}));
+
