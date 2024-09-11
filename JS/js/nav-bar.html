@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 10px;
+        }
+        nav{
+            background-color: #bdc3c7;
+            margin-right: 10px;
+        }
+        ul{
+            list-style: none;
+        
+        }
+        ul.menu{
+            display: flex;
+            /* justify-content: center; */
+            padding: 0;
+            margin: 10px;
+            position: relative; /* dropdown-menuyu göstermek için */
+                   
+        }
+        ul>li.menu{
+            margin-right: 40px;
+        }
+        ul.menu > li {
+            margin-right: 40px; /* Öğeler arasındaki boşluğu artırır */
+        }
+        .dropdown-menu{
+            position: fixed;
+            display: none;
+            background-color: #f1c40f;
+        }
+        .open{
+            display: block;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>Ana Sayfa</li>
+            <li class="dropdown">Kategory
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                  </svg>
+                  <ul class="dropdown-menu open">
+                    <li>Pc</li>
+                    <li>Phone</li>
+                    <li>Ekran</li>
+                  </ul>
+                 </li>
+                 <li class="dropdown dropdown-menu">Ürünler
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                      </svg>
+                      <ul class="dropdown-menu open">
+                        <li>Pc</li>
+                        <li>Phone</li>
+                        <li>Ekran</li>
+                      </ul>
+                     </li>
+            <li>Iletişim</li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, explicabo.</p>
+            <p>Voluptatibus aliquam sed impedit? Sed excepturi nemo officia. Delectus, facere.</p>
+            <p>Minus ipsam animi voluptates earum dicta suscipit atque odit tenetur?</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Qui quibusdam cum perferendis.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, eos.</p>
+            <p>Fuga temporibus amet labore ipsam? Vel, cupiditate. Ad, doloribus odio.</p>
+            <p>Eius quae doloribus, accusamus sed corporis excepturi amet porro aperiam!</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Laborum aspernatur quasi earum?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nam.</p>
+            <p>Odio voluptates eligendi tempore possimus illo, doloremque provident officiis veritatis.</p>
+            <p>Obcaecati reprehenderit voluptatum quam aspernatur eligendi quos qui perferendis voluptates.</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Cupiditate voluptatum dignissimos dolore!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, tenetur.</p>
+            <p>Vitae et ad, obcaecati id natus iusto nesciunt mollitia magnam!</p>
+            <p>Cumque adipisci placeat voluptates reiciendis ipsum earum ea soluta commodi.</p>
+            <hr>
+        </article>
+        <article>
+            <h2>Quam porro cupiditate consectetur.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, maiores.</p>
+            <p>Perferendis recusandae dolore unde voluptatem repellat quaerat iusto expedita ipsa.</p>
+            <p>Quod culpa suscipit quam porro vero dolorum iusto provident qui.</p>
+            <hr>
+        </article>
+    </section>
+    <script>
+        // Tüm '.dropdown' sınıfına sahip elementleri seçiyoruz
+        const categoryElements = document.querySelectorAll('.dropdown');
+      
+        // Her bir element üzerinde döngü kurarak click olayını ekliyoruz
+        categoryElements.forEach(categoryElement => {
+          categoryElement.addEventListener("click", () => {
+            // 'ul.dropdown-menu' öğesini seçiyoruz
+            const dropDown = document.querySelector('ul.dropdown-menu');
+            // console.log(dropDown);  // Seçilen 'dropdown-menu' öğesini konsola yazdırıyoruz
+            dropDown.classList.toggle('open'); // 'dropdown-menu' öğesine 'open' sınıfını ekliyoruz});
+        })});
+
+    </script>
+</body>
+</html>

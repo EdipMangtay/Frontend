@@ -1,0 +1,140 @@
+html{
+    font-size: 15px; /* Tüm sayfa için temel font boyutunu 15px olarak ayarlar */
+}
+:root{
+    /* Renk değişkenleri tanımlanıyor, böylece bu renkler projede tekrar kullanılabilir */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+*{
+    box-sizing: border-box; /* Padding ve border'ın toplam genişliği etkilememesi için box-sizing ayarlanıyor */
+}
+body{
+    background-color: var(--off-white); /* Sayfanın arka plan rengini tanımlanmış renkle ayarlar */
+    margin: 0; /* Sayfanın kenar boşluklarını sıfırlar */
+    padding: 0%; /* Sayfanın iç boşluklarını sıfırlar */
+    font-family: 'Inter', sans-serif; /* Sayfa için font ailesini Inter olarak ayarlar */
+}
+.container, nav{
+    width: 1100px; /* Container ve nav için genişlik ayarlanıyor */
+    margin: 0 auto; /* Ortalanarak sayfa içinde yer almasını sağlar */
+}
+nav>ul{
+    list-style: none; /* Liste işaretlerini kaldırır */
+    display: flex; /* Flexbox düzeni kullanılarak öğeleri yan yana sıralar */
+    gap: 10px; /* Liste öğeleri arasında 10px boşluk bırakır */
+}
+nav{
+    margin-top: 80px; /* Nav menüsünün üst kısmında 80px boşluk bırakır */
+    display: flex; /* Flexbox düzeni kullanılır */
+    justify-content: space-between; /* Öğeleri yatayda iki uca yerleştirir */
+}
+a{
+    color: var(--dark-grayish-blue); /* Linklerin rengini tanımlanmış renk olarak ayarlar */
+}
+
+nav>ul>li > a:hover {
+    font-weight: bold; /* Linkin üzerine gelindiğinde yazı kalınlaşır */
+    text-decoration: underline; /* Linkin üzerine gelindiğinde altı çizilir */
+}
+.w-100{
+    width: 100%; /* Elemanın genişliğini %100 olarak ayarlar */
+}
+.bt-none{
+    border-bottom: none !important; /* Alt kenarlığı kaldırır ve !important ile bunu zorunlu kılar */
+}
+.container{
+    display: flex; /* Flexbox düzeni kullanarak içerikleri hizalar */
+    flex-wrap: wrap; /* İçerikler alan daraldığında alt satıra geçebilir */
+    margin-top: 60px; /* Üstten 60px boşluk bırakır */
+    gap: 30px; /* İçerikler arasında 30px boşluk bırakır */
+}
+.container>section{
+    flex: 2; /* Section alanı diğer içeriklere göre iki kat genişler */
+}
+.container > aside{
+    flex: 1; /* Aside alanı diğer içeriklerin yarısı kadar genişler */
+}
+.info {
+    display: flex; /* Flexbox düzeni ile içerikleri hizalar */
+    gap: 50px; /* İçerikler arasında 50px boşluk bırakır */
+}
+  
+.info h1 {
+    font-size: 4rem; /* Başlık boyutunu 4rem olarak ayarlar */
+    margin: 20px 0 0; /* Üstten 20px boşluk bırakır ve alt tarafı sıfırlar */
+}
+  
+.info > .item {
+    flex: 1; /* Flexbox itemlerin eşit genişlikte olmasını sağlar */
+}
+  
+.item-detail{
+    justify-content: space-between; /* İçerikler arasında boşluk bırakır */
+    margin-top: 10px; /* Üstten 10px boşluk bırakır */
+}
+.item-detail > a.btn{
+    margin-top: 40px; /* Butonun üst tarafında 40px boşluk bırakır */
+    padding: 15px 40px; /* Butona içeriden 15px yukarı-aşağı, 40px sağ-sol boşluk ekler */
+    background-color: var(--soft-red); /* Butonun arka plan rengini kırmızı yapar */
+    display: inline-block; /* Butonun blok yapısını korur, fakat yan yana gelebilir */
+    color:var(--off-white); /* Butonun metin rengini beyaz yapar */
+}
+
+.container > aside {
+    flex: 1; /* Aside alanı, diğer içeriklerin yarısı kadar genişler */
+    padding: 20px; /* İçeriden 20px boşluk ekler */
+    background-color: var(--very-dark-blue); /* Arka plan rengini çok koyu mavi yapar */
+}
+.container > aside > h2 {
+    color: var(--soft-orange); /* H2 başlığının rengini turuncu yapar */
+    margin-top: 10px; /* Üstten 10px boşluk bırakır */
+    font-style: 2rem; /* (Bu satırda bir hata var: `font-style` yerine `font-size` kullanılmalı) */
+}
+aside>.item{
+    margin-top: 20px; /* Üstten 20px boşluk bırakır */
+    border: 1px solid --dark-grayish-blue; /* (Bu satırda bir hata var: `--dark-grayish-blue` değişkeni iki tire ile yazılmış, tek tire olmalı) */
+}
+aside>.item>h3{
+    color: var(--off-white); /* H3 başlığının rengini beyaz yapar */
+    margin-top: 20px; /* Üstten 20px boşluk bırakır */
+}
+aside>.item>p{
+    color: var(--grayish-blue); /* Paragrafların rengini gri mavi yapar */
+    margin-top: 10px; /* Üstten 10px boşluk bırakır */
+}
+footer.container {
+    gap: 0; /* Footer içindeki öğeler arasında boşluk bırakmaz */
+}
+  
+footer.container > .item {
+    flex: 1; /* Öğeler, esnek olarak eşit genişlikte yer alır */
+    display: flex; /* Flexbox düzeni kullanarak içerikleri hizalar */
+}
+  
+footer.container > .item > img {
+    width: 100px; /* Resim genişliğini 100px olarak ayarlar */
+    max-height: 120px; /* Resim yüksekliğini maksimum 120px olarak sınırlar */
+}
+  
+footer.container > .item > div { 
+    flex: 2; /* İçerik alanı, resim alanından daha geniş olur */
+    padding: 0 20px; /* Sağ ve sol tarafa 20px iç boşluk ekler */
+}
+  
+footer.container > .item h3 {
+    margin: 0; /* H3 başlığının kenar boşluklarını sıfırlar */
+    color: var(--grayish-blue); /* Başlığın rengini gri mavi yapar */
+}
+  
+footer.container > .item h4 {
+    margin: 10px 0 0; /* Üstten 10px boşluk bırakır, alt tarafı sıfırlar */
+}
+  
+footer.container > .item p {
+    color: var(--very-dark-blue); /* Paragraf metinlerinin rengini çok koyu mavi yapar */
+}

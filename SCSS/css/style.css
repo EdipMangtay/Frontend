@@ -1,0 +1,117 @@
+@charset "UTF-8";
+nav {
+  background-color: #33495e;
+  margin-bottom: 20px;
+  padding: 15px 5px;
+}
+nav ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+nav ul > li > a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+nav ul > li > a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  background-color: red;
+}
+
+.container, .entend-container-info {
+  background-color: #33495e;
+  color: #ecf0f1 10px;
+}
+
+.btn {
+  display: inline-block; /* Elemanı satır içi blok seviyesinde gösterir. Buton gibi davranır, genişlik ve yükseklik ayarlanabilir. */
+  border-radius: 3px; /* Köşeleri 3px yuvarlatır, butona daha yumuşak bir görünüm verir. */
+  padding: 7px 12px; /* Elemanın iç kenarlarına 7px üst/alt ve 12px sağ/sol boşluk ekler. */
+  border: 1px solid #D5D5D5; /* 1px kalınlığında, D5D5D5 renginde düz bir kenarlık ekler. */
+  background-image: linear-gradient(#EEE, #DDD); /* Butona, üstten alta doğru #EEE'den #DDD'ye geçişli bir arka plan rengi uygular. */
+  font: 700 13px/18px Helvetica, arial; /* Yazı tipi ayarı: Kalın (700) yazı, 13px font boyutu, 18px satır yüksekliği, Helvetica veya Arial yazı tipleri kullanılır. */
+}
+.btn:hover {
+  color: red; /* Butonun üzerine gelindiğinde, metin rengini kırmızıya değiştirir. */
+}
+.btn--state-success {
+  color: #FFF; /* Başarı durumunda (state-success) buton metin rengini beyaz yapar. */
+  background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x; /* Arka plan rengi yeşil (#569E3D), üstten alta geçişli olarak (#79D858'den #569E3D'ye) ayarlanır. */
+  border-color: #4A993E; /* Kenarlık rengini yeşil (#4A993E) yapar. */
+}
+.btn--state-danger {
+  color: #900; /* Tehlike durumunda (state-danger) buton metin rengini koyu kırmızı (#900) yapar. */
+}
+
+/* 
+  card_mixin: Bu mixin, kart stilini belirlemek için kullanılır. 
+  Sabit arka plan rengi (bg-color) ve kenarlık stilini içerir.
+*/
+/* 
+  card_mixin_v2: Bu mixin, card_mixin'in gelişmiş bir versiyonudur. 
+  Arka plan rengini dinamik olarak geçmenize olanak tanır, varsayılan olarak $bg-color kullanılır.
+*/
+/* 
+  .card sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak stil uygulanmış bir kart oluşturur. 
+  Varsayılan arka plan rengini kullanır ($bg-color).
+*/
+.card {
+  background-color: #33495e; /* Arka plan rengini, parametre olarak geçen $bg değerine ayarlar */
+  border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+  border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  /* Mixin'in varsayılan arka plan rengi kullanılarak dahil edilmesi */
+}
+
+/* 
+  .card_with_bg sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak özel arka plan rengine sahip bir kart oluşturur.
+  Burada arka plan rengi (#f1c40f) olarak belirlenmiştir.
+*/
+.card_with_bg {
+  background-color: #f1c40f; /* Arka plan rengini, parametre olarak geçen $bg değerine ayarlar */
+  border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+  border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  /* Özel arka plan rengi (#f1c40f) kullanılarak mixin'in dahil edilmesi */
+}
+
+.extend-button, .extend-button--success {
+  color: red;
+  background-color: black;
+}
+.extend-button--success {
+  background-color: #33495e;
+}
+
+.entend-container-info {
+  background: yellowgreen;
+  font-size: 20px;
+}
+
+.icon-home {
+  font-size: 16px;
+  background-image: url("assets/icons/name.svg");
+}
+
+.pt {
+  padding-top: 10px;
+}
+
+.pb {
+  padding-bottom: 10px;
+}
+
+.pl {
+  padding-left: 10px;
+}
+
+.pr {
+  padding-right: 10px;
+}/*# sourceMappingURL=style.css.map */

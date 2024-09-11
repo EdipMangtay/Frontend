@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div {
+            background-color: aqua;
+        }
+
+        .container {
+            background-color: red;
+        }
+
+        div.info {
+            background-color: yellow;
+        } /* burada secicilerde önemli olan sıralamadır. */
+
+        .info {
+            background-color: green;
+        }
+
+        .info-1 {
+            background-color: blue;
+        }
+
+        .info-2 {
+            background-color: pink;
+        }
+
+        .info-1.info-2 {
+            background-color: purple;
+        } /* burada secicilerde önemli olan sıralamadır. bir şekilde override gibi düşünebilirsin */
+
+        .container > .span-info {
+            background-color: darkorange;
+        } /* burada span-info, container içindeki çocuk eleman */
+
+
+        
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, expedita!</div>
+    </div>
+    <p class="info">Denemeler</p>
+    <div class="info">Mangtay</div>
+    <p class="info-1 info-2">Info: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, quam?</p>
+
+    <div class="container">
+        <span class="info"></span>
+    </div>
+    <div class="container">
+        <span class="span-info">
+            container içerisindeki span info
+        </span>
+        <div>
+            <span class="span-info">
+                div içindeki span info
+            </span>
+        </div>
+    </div> 
+</body>
+</html>

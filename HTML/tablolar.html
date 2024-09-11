@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Belge tipini HTML5 olarak belirtiyoruz -->
+    <meta charset="UTF-8">
+    <!-- Sayfanın başlığını belirtiyoruz -->
+    <title>Örnek HTML Sayfası</title>
+</head>
+<body>
+    <!-- Başlık seviyesinde bir metin ekliyoruz -->
+    <h1>Merhaba, Bu Bir Örnek HTML Sayfasıdır!</h1>
+    <!-- Paragraf etiketiyle bir metin ekliyoruz -->
+    <p>Bu sayfa HTML ile neler yapabileceğinizi gösteren bir örnektir.</p>
+
+    <!-- Liste başlığı ekliyoruz -->
+    <h2>Sıralı Liste</h2>
+    <!-- Sıralı bir liste (numaralı) oluşturuyoruz -->
+    <ol>
+        <!-- Liste öğesi -->
+        <li>HTML öğren</li>
+        <!-- Liste öğesi -->
+        <li>CSS öğren</li>
+        <!-- Liste öğesi -->
+        <li>JavaScript öğren</li>
+    </ol>
+
+    <!-- Sırasız bir liste (madde işaretli) oluşturuyoruz -->
+    <h2>Sırasız Liste</h2>
+    <ul>
+        <!-- Liste öğesi -->
+        <li>HTML, web sayfalarının yapısını tanımlar</li>
+        <!-- Liste öğesi -->
+        <li>CSS, web sayfalarını stilize eder</li>
+        <!-- Liste öğesi -->
+        <li>JavaScript, web sayfalarına etkileşim katar</li>
+    </ul>
+
+    <!-- Görsel ekliyoruz -->
+    <h2>Görsel Ekleme</h2>
+    <!-- Resim ekleme etiketi -->
+    <img src="https://via.placeholder.com/150" alt="Örnek Görsel">
+
+    <!-- Bağlantı ekliyoruz -->
+    <h2>Bağlantı Ekleme</h2>
+    <!-- Bağlantı etiketi, href özelliği ile hedef adresi belirliyoruz -->
+    <a href="https://www.example.com" target="_blank">Örnek Web Sitesi</a>
+
+    <!-- Tablo oluşturuyoruz -->
+    <h2>Tablo Oluşturma</h2>
+    <table border="11">
+        <!-- Tablo başlık satırı -->
+        <tr>
+            <!-- Tablo başlığı hücresi -->
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+        </tr>
+        <!-- Tablo veri satırı -->
+        <tr>
+            <!-- Tablo veri hücresi -->
+            <td>Ali</td>
+            <td>Yılmaz</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Ayşe</td>
+            <td>Öztürk</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <!-- Form oluşturuyoruz -->
+    <h2>Form Oluşturma</h2>
+    <form action="/submit" method="post">
+        <!-- Etiket ve giriş alanı (text) -->
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <!-- Etiket ve giriş alanı (email) -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <!-- Etiket ve giriş alanı (password) -->
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <!-- Buton (submit) -->
+        <input type="submit" value="Gönder">
+    </form>
+
+    <!-- Yorum satırı ekliyoruz -->
+    <h2>Yorum Satırı</h2>
+    <p>Bu paragrafın altında bir yorum satırı var ama tarayıcıda görünmez.</p>
+    <!-- Bu bir yorum satırıdır -->
+
+    <!-- Video ekliyoruz -->
+    <h2>Video Ekleme</h2>
+    <video width="320" height="240" controls>
+        <!-- Video kaynağı -->
+        <source src="movie.mp4" type="video/mp4">
+        <!-- Video desteklenmiyorsa gösterilecek metin -->
+        Tarayıcınız bu videoyu desteklemiyor.
+    </video>
+
+    <!-- Ses ekliyoruz -->
+    <h2>Ses Ekleme</h2>
+    <audio controls>
+        <!-- Ses kaynağı -->
+        <source src="audio.mp3" type="audio/mp3">
+        <!-- Ses desteklenmiyorsa gösterilecek metin -->
+        Tarayıcınız bu sesi desteklemiyor.
+    </audio>
+
+    <!-- HTML'de yatay bir çizgi ekliyoruz -->
+    <h2>Yatay Çizgi</h2>
+    <hr>
+
+    <!-- Blok alıntı oluşturuyoruz -->
+    <h2>Blok Alıntı</h2>
+    <blockquote>
+        Bu, bir blok alıntı örneğidir. Bir metni bu şekilde vurgulayabilirsiniz.
+    </blockquote>
+
+    <!-- Kod satırı ekliyoruz -->
+    <h2>Kod Satırı</h2>
+    <p>
+        Bu bir kod satırı: <code>console.log('Merhaba Dünya');</code>
+    </p>
+
+    <!-- İletişim bilgileri için footer oluşturuyoruz -->
+    <footer>
+        <!-- Footer başlığı -->
+        <h2>İletişim</h2>
+        <!-- Adres ekliyoruz -->
+        <address>
+            <strong>Örnek Şirket</strong><br>
+            1234 Cadde, No: 567<br>
+            İstanbul, Türkiye<br>
+            <a href="mailto:info@ornek.com">info@ornek.com</a>
+        </address>
+    </footer>
+</body>
+</html>

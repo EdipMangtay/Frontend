@@ -1,0 +1,35 @@
+/* 
+  card_mixin: Bu mixin, kart stilini belirlemek için kullanılır. 
+  Sabit arka plan rengi (bg-color) ve kenarlık stilini içerir.
+*/
+@mixin card_mixin() {
+    background-color: $bg-color; /* Arka plan rengini $bg-color değişkenine ayarlar */
+    border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+    border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  }
+  
+  /* 
+    card_mixin_v2: Bu mixin, card_mixin'in gelişmiş bir versiyonudur. 
+    Arka plan rengini dinamik olarak geçmenize olanak tanır, varsayılan olarak $bg-color kullanılır.
+  */
+  @mixin card_mixin_v2($bg: $bg-color) {
+    background-color: $bg; /* Arka plan rengini, parametre olarak geçen $bg değerine ayarlar */
+    border-radius: 4px; /* Kartın köşelerini 4px yuvarlatır */
+    border: 1px solid #c9c9c9; /* 1px kalınlığında gri kenarlık ekler */
+  }
+  
+  /* 
+    .card sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak stil uygulanmış bir kart oluşturur. 
+    Varsayılan arka plan rengini kullanır ($bg-color).
+  */
+  .card {
+    @include card_mixin_v2(); /* Mixin'in varsayılan arka plan rengi kullanılarak dahil edilmesi */
+  }
+  
+  /* 
+    .card_with_bg sınıfı: Bu sınıf, card_mixin_v2 mixin'ini kullanarak özel arka plan rengine sahip bir kart oluşturur.
+    Burada arka plan rengi (#f1c40f) olarak belirlenmiştir.
+  */
+  .card_with_bg {
+    @include card_mixin_v2(#f1c40f); /* Özel arka plan rengi (#f1c40f) kullanılarak mixin'in dahil edilmesi */
+  }

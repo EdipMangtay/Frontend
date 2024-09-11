@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    
+}
+.box{
+    background-color: #ff4d4d;
+    min-height: 400px;
+    text-align: center;
+    background-image: url('../img/nature.jpg');
+    background-size: 60%;
+    background-position: 10px bottom;
+    background-repeat: no-repeat;
+
+
+    
+
+}

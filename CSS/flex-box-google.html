@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS değişkenleri tanımlanıyor, bu sayede renkler birden fazla yerde kolayca kullanılabilir */
+    :root {
+      --green: #2ecc71;
+      --blue: #3498db;
+      --yellow: #f1c40f;
+      --red: #e74c3c;
+      --dark-blue: #34495e;
+      --midnight-blue: #2c3e50;
+      --light-white: #ecf0f1;
+      --silver: #bdc3c7;
+    }
+    
+    /* Sayfa genelinde arka plan rengi ve kenar boşlukları ayarlanıyor */
+    body {
+      background-color: var(--silver); /* Sayfanın arka plan rengi gümüş renginde ayarlanıyor */
+      margin: 0; /* Sayfanın kenar boşlukları sıfırlanıyor */
+      padding: 0; /* Sayfanın iç boşlukları sıfırlanıyor */
+    }
+
+    /* Flexbox container olarak kullanılıyor, içerikler dikeyde düzenleniyor */
+    .flex-container {
+      display: flex; /* Flexbox düzeni aktif ediliyor */
+      height: 100vh; /* Yükseklik, tarayıcı penceresinin tamamı olacak şekilde ayarlanıyor */
+      flex-direction: column; /* İçerikler dikeyde sıralanıyor */
+      justify-content: space-between; /* İçerikler arasında eşit boşluk bırakılarak yerleştiriliyor */
+    }
+
+    /* Genel stil ayarı, arka plan rengi ve metin rengi belirleniyor */
+    .item {
+      background: var(--dark-blue); /* Koyu mavi arka plan rengi */
+      color: var(--light-white); /* Açık beyaz metin rengi */
+    }
+
+    /* Navbar içindeki liste (ul) ayarları */
+    .item > nav > ul {
+      padding: 20px; /* İçeriden boşluk veriliyor */
+      margin: 0; /* Kenar boşlukları sıfırlanıyor */
+      display: flex; /* Liste elemanları yatayda sıralanıyor */
+      list-style-type: none; /* Liste işaretleri kaldırılıyor */
+      justify-content: flex-end; /* Liste elemanları sağa hizalanıyor */
+    }
+
+    /* Navbar içindeki liste elemanları (li) arası boşluk ayarlanıyor */
+    .item > nav > ul > li {
+      margin-right: 10px; /* Sağ tarafta 10px boşluk bırakılıyor */
+    }
+
+    /* Google logosu ve arama kutusu için stil ayarları */
+    .google {
+      text-align: center; /* İçerikler ortalanıyor */
+      width: 600px; /* Genişlik 600px olarak ayarlanıyor */
+      margin: 0 auto; /* Ortalanıyor (sağ ve sol margin ile) */
+      padding: 20px; /* İçeriden boşluk veriliyor */
+    }
+
+    /* Footer kısmı için genel stil ayarları */
+    .footer {
+      padding: 20px; /* İçeriden boşluk veriliyor */
+    }
+
+    /* Footer içindeki bölümlere iç boşluk ekleniyor */
+    .footer > div {
+      padding: 10px 0; /* Üst ve alt tarafa 10px boşluk veriliyor */
+    }
+
+    /* Footer içindeki nav bölümü için flexbox kullanılıyor */
+    .footer-nav {
+      display: flex; /* Flexbox düzeni aktif ediliyor */
+      justify-content: space-between; /* İçerikler arasında boşluk bırakılıyor */
+    }
+
+    /* Footer içindeki liste (ul) ayarları */
+    .footer-nav ul {
+      padding: 0; /* İçeriden boşluk sıfırlanıyor */
+      display: flex; /* Liste elemanları yatayda sıralanıyor */
+      margin: 0; /* Kenar boşlukları sıfırlanıyor */
+      list-style-type: none; /* Liste işaretleri kaldırılıyor */
+    }
+
+    /* Footer içindeki liste elemanları (li) arası boşluk ayarlanıyor */
+    .footer-nav ul li {
+      margin-right: 10px; /* Sağ tarafta 10px boşluk bırakılıyor */
+    }
+
+    /* Alt kenarlık (border) ekleniyor */
+    .bt-1 {
+      border-bottom: 1px solid var(--blue); /* Mavi renkte alt kenarlık */
+    }
+
+    /* Başlık (h1) için stil ayarları */
+    h1 {
+      font-size: 4rem; /* Font boyutu 4 rem olarak ayarlanıyor */
+    }
+
+    /* Arama kutusu için stil ayarları */
+    input {
+      padding: 10px 20px; /* İçeriden boşluk veriliyor */
+      border-radius: 6px; /* Kenarları yuvarlanıyor */
+    }
+  </style>
+  <title>Flexbox-Google-Layout</title>
+</head>
+<body>
+  <div class="flex-container">
+    <!-- Üst kısım, navigasyon menüsü -->
+    <div class="item">
+      <nav>
+        <ul>
+          <li>Gmail</li>
+          <li>Images</li>
+          <li>Obcaecati!</li>
+          <li>Aperiam.</li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- Orta kısım, Google logosu ve arama kutusu -->
+    <div class="item">
+      <div class="google">
+        <h1>Google</h1>
+        <input type="text" placeholder="Search..">
+      </div>
+    </div>
+
+    <!-- Alt kısım, footer -->
+    <div class="item footer">
+      <div class="bt-1">
+        Türkiye
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li>Lorem.</li>
+          <li>Omnis.</li>
+          <li>Veritatis!</li>
+          <li>Quae?</li>
+        </ul>
+        <ul>
+          <li>Lorem.</li>
+          <li>Perspiciatis!</li>
+          <li>Architecto.</li>
+          <li>Similique?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

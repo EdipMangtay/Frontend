@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Sayfa genelindeki temel stil ayarları */
+        body {
+            margin: 0; /* Sayfanın kenar boşlukları sıfırlanıyor */
+            padding: 0; /* Sayfanın iç boşlukları sıfırlanıyor */
+            font-family: Arial, sans-serif; /* Yazı tipi Arial olarak ayarlanıyor */
+            background-color: #fff1f1; /* Arka plan rengi açık pembe olarak ayarlanıyor */
+        }
+
+        /* Ana container stil ayarları */
+        .container {
+            max-width: 800px; /* Maksimum genişlik 800px olarak ayarlanıyor */
+            margin: 0 auto; /* Ortalanıyor (sağ ve sol margin ile) */
+            width: 800px; /* Genişlik 800px olarak ayarlanıyor */
+            border-radius: 8px; /* Kenarları yuvarlatılıyor */
+            background-color: #fff1f1; /* Arka plan rengi açık pembe olarak ayarlanıyor */
+            box-sizing: border-box; /* Padding ve border hesaplamaları için box-sizing ayarlanıyor */
+            padding: 10px; /* İçeriden boşluk veriliyor */
+            display: flex; /* Flexbox düzeni aktif ediliyor */
+            flex-wrap: wrap; /* İçerikler gerektiğinde bir alt satıra geçiyor */
+            gap: 10px; /* Kartlar arasında 10px boşluk bırakılıyor */
+        }
+
+        /* Kartların genel stil ayarları */
+        .card {
+            box-sizing: border-box; /* Padding ve border hesaplamaları için box-sizing ayarlanıyor */
+            padding: 10px 5px; /* Kart içi boşluk ayarlanıyor */
+            border-radius: 4px; /* Kenarları yuvarlatılıyor */
+            border: 1px solid #ccc; /* Kartlara gri bir çerçeve ekleniyor */
+            flex-grow: 1; /* Kartlar, eşit alanı kaplayacak şekilde esniyor */
+            flex-basis: 300px; /* Kartların minimum genişliği 300px olarak ayarlanıyor */
+        }
+
+        /* Kart içindeki resimlerin stil ayarları */
+        .card > img {
+            box-sizing: border-box; /* Padding ve border hesaplamaları için box-sizing ayarlanıyor */
+            width: 100%; /* Resimler, kartın tamamını kaplayacak şekilde genişletiliyor */
+            border-radius: 4px; /* Resimlerin kenarları yuvarlatılıyor */
+            background-color: #ccc; /* Resimler yüklenmediğinde gri bir arka plan gösteriliyor */
+            padding: 4px; /* Resimlerin etrafına iç boşluk ekleniyor */
+            border: 1px solid #ccc; /* Resimlerin etrafına gri bir çerçeve ekleniyor */
+        }
+
+        /* Büyük kart stil ayarları (daha fazla alan kaplar) */
+        .big-card {
+            flex-grow: 2; /* Bu kart, diğer kartlardan daha fazla alan kaplayacak şekilde esniyor */
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Kartları içeren ana container -->
+    <div class="container">
+        <!-- Büyük kart (daha fazla alan kaplar) -->
+        <div class="card big-card">
+            <img src="https://picsum.photos/id/231/500/300" alt="">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, magnam!</p>
+            <p>Autem ad reprehenderit, doloremque reiciendis temporibus mollitia omnis nam distinctio.</p>
+        </div>
+        <!-- Diğer kartlar -->
+        <div class="card">
+            <img src="https://picsum.photos/id/232/500/300" alt="">
+            <h2>Nemo, provident rerum?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, optio.</p>
+            <p>Nisi, nemo consectetur. Mollitia, delectus? Ex voluptate modi porro officiis!</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/233/500/300" alt="">
+            <h2>Exercitationem, voluptatibus error.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, id.</p>
+            <p>Autem sunt fugiat rerum asperiores voluptate quisquam quos accusamus ducimus!</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/234/500/300" alt="">
+            <h2>Aspernatur, eius corporis.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, dolores?</p>
+            <p>Ullam illum perspiciatis ipsam culpa enim omnis, totam rerum hic.</p>
+        </div>
+    </div>
+</body>
+</html>
