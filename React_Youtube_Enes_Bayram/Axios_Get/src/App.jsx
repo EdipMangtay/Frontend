@@ -10,10 +10,10 @@ function App() {
      const response = await axios.get(BASE_URL + '/users') // Ben seni istedim sen gelince diğer kodları çalıştıracağım dedik
      console.log(response.data)
   }
-  const getUserById = async(userid) =>{
-    const response = await axios.get(BASE_URL + '/users/'+userid);
-    console.log(response.data)
-  }
+  // const getUserById = async(userid) =>{
+  //   const response = await axios.get(BASE_URL + '/users/'+userid);
+  //   console.log(response.data)
+  // }
 
 
   const createUser = async(newUser)=>{
@@ -33,7 +33,40 @@ function App() {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const getUserById = async(userid)=>{
+  
+    const response = await axios.get(`${BASE_URL}/users/${userid}`);    return response.data.postId;
+  }
+  const getPostById = async(postid)=>{
+    
+    const response = await axios.get("http://jsonplaceholder.typicode.com/posts/"+postid);
+    return response.data;
+  }
+
+  const getPost = async()=>{
+    const postId =  await getUserById(1);
+    const data = await getPostById(postId);
+    console.log(data)
+  }
+
   useEffect(() =>{
+    getPost();
     // getAllUsers()
     // getUserById(1)
     // const newUser={
@@ -45,7 +78,7 @@ function App() {
     // updateUser(1,{
     //   "username":"Mavi",
     //   "password":"5660",})
-    deleteUser("8569");
+    // deleteUser("8569");
 
   },[])
 

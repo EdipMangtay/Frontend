@@ -1,9 +1,10 @@
 {
   "users": [
     {
-      "id": "628b",
+      "id": "1",
       "username": "ahmet",
-      "password": "1234"
+      "password": "1234",
+      "postId": "7"
     }
   ]
 }
