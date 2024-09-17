@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
 import '../css/Header.css';
 import { FaBasketShopping } from "react-icons/fa6";
 import { MdModeNight } from "react-icons/md";
-import { GoMoon } from "react-icons/go";
+import { useNavigate } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 
 
 
 
 function Header() {
     const [theme, setTheme] = useState(false);
+    const navigate = useNavigate();
+    const {products} = useSelector((store) => store.basket);
 
     const changeTheme = () => {
         const root = document.getElementById("root");
@@ -24,8 +29,8 @@ function Header() {
 
   return (
     <>
-    <div style={{display:"flex" , flexDirection:"row" , alignItems:"center",justifyContent:"space-between"}} >
-        <div className='flex-row'>
+    <div  style={{display:"flex" , flexDirection:"row" , alignItems:"center",justifyContent:"space-between"}} >
+        <div className='flex-row' onClick={() => navigate("/")}>
             <img src="./src/images/logov1.png" alt="" className="logo" />
             <p className='logo-text'>Edip Mangtay</p>
         </div>
@@ -33,10 +38,13 @@ function Header() {
         <div className='flex-row'>
             <input className ="search-input" type="text" placeholder='Bir Şeyler Ara' />
             <div className='icon'>
+
+            <Badge  badgeContent={products.length} color="primary">
                 <FaBasketShopping />
+            </Badge>
                 <MdModeNight  onClick={changeTheme}/>
-                {/* <GoMoon /> */}
             </div>
+           
 
         </div>
     </div>

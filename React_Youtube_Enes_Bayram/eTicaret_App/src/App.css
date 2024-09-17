@@ -14,3 +14,19 @@ body{
     align-items: center;
     justify-content: center;
 }
+.drawer {
+    width: 500px; /* Çekmecenin genişliği */
+    height: 100%; /* Ekranın tam yüksekliğini kaplar */
+    position: fixed; /* Çekmece sabit kalır, sayfa kaydırıldığında yerinde durur */
+    top: 0; /* Üst kenardan başlar */
+    right: 0; /* Sağ kenardan açılır, 'left: 0;' sol kenardan açılmasını sağlar */
+    background-color: #f4f4f4; /* Çekmecenin arka plan rengi */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2); /* Sol kenara gölge ekler */
+    z-index: 1000; /* Diğer içeriklerin üzerinde görünür */
+    transition: transform 0.3s ease; /* Açılıp kapanma animasyonu için */
+    transform: translateX(100%); /* Başlangıçta görünmez (sağda saklı) */
+}
+
+.drawer.open {
+    transform: translateX(0); /* Açık durumda tüm çekmeceyi göster */
+}

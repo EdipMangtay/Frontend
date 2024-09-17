@@ -23,6 +23,9 @@ export const productSlice = createSlice({
     initialState,  // Başlangıç durumu
     reducers: {
         // İsteğe bağlı reducers burada tanımlanabilir
+        setSelectedProduct : (state,action) =>{
+            state.selectedProduct = action.payload;
+        }
     },
     extraReducers: (builder) => {
         // API isteği sırasında bekleyen durum
@@ -46,7 +49,7 @@ export const productSlice = createSlice({
 });
 
 // Özel eylemler olmadığı için şu an boş bırakıldı
-export const {} = productSlice.actions;
+export const {setSelectedProduct} = productSlice.actions;
 
 // Slice'ın reducer'ını dışa aktarıyoruz
 export default productSlice.reducer;
