@@ -26,7 +26,7 @@ function Header() {
     <>
     <div style={{display:"flex" , flexDirection:"row" , alignItems:"center",justifyContent:"space-between"}} >
         <div className='flex-row'>
-            <img src="./src/images/logoo-PNG.png" alt="" className="logo" />
+            <img src="./src/images/logov1.png" alt="" className="logo" />
             <p className='logo-text'>Edip Mangtay</p>
         </div>
 
