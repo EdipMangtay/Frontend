@@ -1,0 +1,12 @@
+- [ ] React-Router-Dom ve Bootstrap Kurulumu
+- [ ] Navbar Oluşturulması
+- [ ] Sayfa Yapısının Oluşturulması
+- [ ] Sayfalara React Router Dom Üzerinden Ulaşılabilmesi
+- [ ] Ürünler Kısmının Oluşturulması
+- [ ] Ana Sayfada 10 Ürün Gösterilmesi
+- [ ] Ürün Layout Yapısının Oluşturulması => Kategoriler ve Son 5 Ürünün Linki
+- [ ] Ürünlere Tıklanınca Detay Sayfasının Açılması
+- [ ] Login Yapısının Oluşturulması (localStorage)
+- [ ] Eğer Kullanıcı Login ise Logout Olabilmesi (localStorage)
+- [ ] Eğer Kullanıcı Login ise Ürünleri Favorilere Atabilisin (localStorage)
+- [ ] Eğer Kullanıcı Login ise Favoriler Sayfasına Gidebilsin
