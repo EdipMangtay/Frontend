@@ -1,8 +1,9 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item ,user }) {
     const productUrl = `/products/product/${item.id}`;
+    console.log(user)
     return (
         <div className="col-sm mb-3">
             <div className="card">
