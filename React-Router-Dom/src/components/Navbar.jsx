@@ -1,5 +1,6 @@
 
 import { NavLink,Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 export default function Navbar({user, handleLogout}) {
 	return (
@@ -18,13 +19,13 @@ export default function Navbar({user, handleLogout}) {
 						<NavLink className="nav-link" to="/about">Hakkımızda</NavLink>
 						<NavLink className="nav-link disabled" to="/contact" aria-disabled="true">İletişim</NavLink>
 						{user ? (
-  <>
-    <button className="nav-link" onClick={handleLogout}>Logout {user.name}</button>
-    <NavLink className="nav-link" to="/fav">Favoriler</NavLink>
-  </>
-) : (
-  <NavLink className="nav-link" to="/login">Login</NavLink>
-)}
+  						<>
+    					<button className="nav-link" onClick={handleLogout}>Logout {user.name}</button>
+    					<NavLink className="nav-link" to="/fav">Favoriler</NavLink>
+  						</>
+						) : (
+  						<NavLink className="nav-link" to="/login">Login</NavLink>
+					)}
 					</div>
 				</div>
 			</div>
