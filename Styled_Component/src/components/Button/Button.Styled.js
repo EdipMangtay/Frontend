@@ -36,7 +36,7 @@ export const CoolButton = styled(StyledButton)`
   border-color: green;
   background-color: ${({ $primary }) => ($primary ? 'green' : 'transparent')};
   color: ${({ $primary }) => ($primary ? 'white' : 'green')};
-
+  text-decoration: none;
   &:hover {
     background-color: ${({ $primary }) => ($primary ? 'transparent' : 'green')};
     color: ${({ $primary }) => ($primary ? 'green' : 'white')};
@@ -63,4 +63,14 @@ export const EdipButton = styled.button`
     color: #fff;
     text-decoration: none;
   }
+
 `;
+
+export const SubmitButton = styled(StrongButton).attrs(
+    { 
+        type: 'submit' 
+    })`
+    font-size: 1.5em;
+    color: black;
+    `;
+    

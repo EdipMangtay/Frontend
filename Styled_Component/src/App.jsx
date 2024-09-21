@@ -1,7 +1,7 @@
 // App.jsx
 import Button from './components/Button/Button';
 import { StyledContainer } from './components/styled';
-import { CoolButton, StrongButton, EdipButton } from './components/Button/Button.Styled';
+import { CoolButton, StrongButton, EdipButton, SubmitButton } from './components/Button/Button.Styled';
 
 function App() {
   return (
@@ -11,18 +11,23 @@ function App() {
         <Button $primary className="btn">
           İncele
         </Button>
-        <StrongButton $primary>
+        <br />
+        <StrongButton $primary type='submit'>
           Strong Button
         </StrongButton>
-        <CoolButton $primary={false}>
-          Cool Button
-        </CoolButton>
-        <CoolButton $primary={true}>
+        <br />  
+        <CoolButton as="a" href="http://google.com" target='_blank'>
           Cool
         </CoolButton>
+        <br />
         <EdipButton>
           Maviş
         </EdipButton>
+        <br />
+        <SubmitButton>
+          Submitt
+        </SubmitButton>
+
       </StyledContainer>
     </>
   );
