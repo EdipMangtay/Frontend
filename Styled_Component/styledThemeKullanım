@@ -1,0 +1,95 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+export const THEME = {
+  darkTheme: false,
+  colors: {
+    primary: '#3498db',
+    secondary: '#2ecc71',
+    success: '#1abc9c',
+    danger: '#e74c3c',
+    warning: '#f39c12',
+    info: '#3498db',
+    light: '#ecf0f1',
+    dark: '#34495e',
+    white: '#fff',
+    black: '#000',
+    bgcolor: "#ecf0f1",
+    textColor: "#2c3e50",
+  },
+  darkThemeColors: {
+    bgColor: "#2c3e50",
+    textColor: "#ecf0f1",
+  },
+};
+
+// Temayı props olarak kabul eden bir buton bileşeni
+const ThemedButton = ({ theme, toggleTheme }) => {
+  return (
+    <Button theme={theme} onClick={toggleTheme}>
+      Tema Değiştir
+    </Button>
+  );
+};
+
+// Temayı props olarak kabul eden içerik bileşeni
+const ThemedContent = ({ theme }) => {
+  return (
+    <Content theme={theme}>
+      <p>Bu bir örnek içeriktir.</p>
+    </Content>
+  );
+};
+
+const App = () => {
+  // Temanın koyu mu açık mı olduğunu kontrol etmek için state
+  const [isDarkTheme, setIsDarkTheme] = useState(THEME.darkTheme);
+
+  // Aktif olan temayı seçmek
+  const currentTheme = isDarkTheme ? THEME.darkThemeColors : THEME.colors;
+
+  // Tema değiştirme fonksiyonu
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  return (
+    <Wrapper theme={currentTheme}>
+      <h1>Props ile Tema Kullanımı</h1>
+      {/* Temayı props olarak çocuk bileşenlere ilet */}
+      <ThemedButton theme={currentTheme} toggleTheme={toggleTheme} />
+      <ThemedContent theme={currentTheme} />
+    </Wrapper>
+  );
+};
+
+// Stil tanımlamaları (styled-components)
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.bgColor};
+  color: ${({ theme }) => theme.textColor};
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Button = styled.button`
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+`;
+
+const Content = styled.div`
+  background-color: ${({ theme }) => theme.light};
+  color: ${({ theme }) => theme.textColor};
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+`;
+
+export default App;

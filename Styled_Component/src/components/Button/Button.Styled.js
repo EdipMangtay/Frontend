@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   border: 1px solid red;
   border-radius: 5px;
   background-color: ${({ $primary }) => ($primary ? 'blue' : 'transparent')};
-  color: ${({ $primary }) => ($primary ? 'white' : 'red')};
+  color: ${({ $primary,theme }) => ($primary ? theme.colors.textColor : 'red')};
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 
